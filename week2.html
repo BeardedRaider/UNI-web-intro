@@ -153,33 +153,106 @@
                 </tr>
                 <tr>
                     <td><a href="https://www.google.com/">Google</a></td>
-                    <td><img src="images/green-cir.png" alt="image"></td>
+                    <td>
+                        <img src="images/green-cir.png" usemap="#image-map">
+                        <map name="image-map">
+                            <area target="_self" alt="green" title="green" href="" coords="31,33,28" shape="circle">
+                        </map>
+                    </td>
                     <td><iframe src="https://www.youtube.com/embed/iAGasxe7AK8?si=BS6Dz7HcPs6nn4x0" frameborder="2" height="10%" width="100%"></iframe></td>
                     <td>Email:<a href="mailto:google@google.com">User</a>
                     <p>Address: 123 never way</p></td>
                     
                 </tr>
                 <tr>
-                    <td><a href="https://www.google.com/">Google</a></td>
-                    <td><img src="images/yello-tri.png" alt="image"></td>
+                    <td><a href="https://www.youtube.com/">YouTube</a></td>
+                    <td>
+                        <img src="images/yello-tri.png"  usemap="#image-map">
+                        <map name="image-map">
+                            <area target="_self" alt="tri" title="tri" href="" coords="36,4,6,58,66,57" shape="poly">
+                        </map>
+                    </td>
                     <td><iframe src="https://www.youtube.com/embed/qkXai91mAT8?si=naQNnif0W5baoZi0" frameborder="2" height="10%" width="100%"></iframe></td>
                     <td>Email:<a href="mailto:epcom@epcot.com">User</a>
                     <p>Address: 123 florida way</p></td>
                     
                 </tr>
                 <tr>
-                    <td><a href="https://www.google.com/">Google</a></td>
-                    <td><img src="images/red-box.png" alt="image"></td>
+                    <td><a href="https://studentapp.uws.ac.uk/campusm/home#menu">UWS</a></td>
+                    <td>
+                        <img src="images/red-box.png" usemap="#image-map">
+                        <map name="image-map">
+                            <area target="_self" alt="red" title="red" href="" coords="5,4,73,60" shape="rect">
+                        </map>
+                    </td>
                     <td><iframe src="https://www.youtube.com/embed/3eCMUrGT51M?si=TLRn7VWlJRI1KyB_" frameborder="2" height="10%" width="100%"></iframe></td>
                     <td>Email:<a href="mailto:john@john.com">User</a>
                     <p>Address: 123 Baker way</p></td>
                     
                 </tr>
+            </table>
+        </div>
+        
+        <br><br>
+
+        <h1><b>Professional Sample Form</b></h1>
+    <fieldset>
+        <br>
+        <fieldset>
+            
+            <legend>Personal information</legend>
+            <br>
+        <label for="fname">First Name: *</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br><br>   
+        </fieldset>
+        <br>
+        
+        <fieldset>
+            <legend>Feedback</legend><br>
+            <label for="feedback">Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Prove feedback here"></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Agreement</legend><br>
+            <label for="feedback">Do ypou agree with the statement:</label><br>
+            <input type="checkbox" name="purchase" value="Yes"> Yes<br>
+            <input type="checkbox" name="purchase" value="No"> No<br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Job information:</legend><br>
+            <label for="source">Select your job:</label><br>
+            <input type="radio" name="source" value="Developer"> Developer <br>
+            <input type="radio" name="source" value="Designer"> Designer <br>
+            <input type="radio" name="source" value="Nurse"> Nurse <br>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Event Date</legend><br>
+            <label for="date">Select a date for your submission:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>File upload</legend><br>
+            <label for="file">Upload your degree (Accepted formats: jpg, png, pdf):</label><br>
+            <input type="file" id="file" name="file"><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Submit</legend><br>
+            <input type="Submit" value="submit"><br><br>
+            <input type="Reset" value="reset"><br><br>
+
+        
 
 
-    </div>
-    
+    </fieldset>
 
+    <br><br>
 
     <script src="script.js"></script>
   </body>
