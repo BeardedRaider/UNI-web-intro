@@ -46,7 +46,7 @@ display: flex;
     color: #f1c40f;
 }
 
-.nav-right a:active {
+.nav-right a.active {
     font-weight: bold;
     color: #f1c40f;
 }
