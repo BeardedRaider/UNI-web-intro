@@ -7,9 +7,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
 
-    <title>Tables</title>
+    <style> h1 {color: maroon; font-style: italic;} h2 {color: yellow;}</style>
+    
+
+    <title>CSS</title>
   </head>
   <body>
     <nav>
@@ -27,6 +30,118 @@
           <li><a href="week6.html">Other</a></li>
         </ul>
       </nav>
+
+
+
+      <div class="styling">
+        <h1>Styling</h1>
+        <br>
+        <h2>Headding 2</h2>
+        <br>
+        <h3 id="heading1">This is a heading</h3>
+        <br>
+        <h6>This is another heading</h6>
+        <br>
+        <p class="Introductions">Intro text here</p>
+        <p class="Speech">Speech text here</p>
+        <br>
+        
+        <p style="font-weight: bold; color: burlywood;">/* */ These are used within the coding processes to leave comments for yourself or others to see. <br>
+        The comments will not appear on the final page.</p>
+        <br><br>
+        <p id="para1">Styling is the process of adding CSS to a webpage to make it look more visually appealing. CSS can be added to a webpage in three ways:</p><br>
+        <ul>
+          <li>Inline - CSS is added directly to the HTML element using the style attribute.</li>
+          <li>Internal - CSS is added to the head section of the HTML document using the style tag.</li>
+          <li id="li1">External - CSS is added to a separate file and linked to the HTML document using the link tag.</li>
+        </ul>
+        <p>There are three main types of CSS selectors:</p>
+        <ul>
+          <li>Element selectors - Selects all elements of a specific type.</li>
+          <li>Class selectors - Selects all elements with a specific class attribute.</li>
+          <li>ID selectors - Selects a single element with a specific ID attribute.</li>
+        </ul>
+        <br>
+        <p id="p2">CSS properties can be used to style elements in a variety of ways, including changing the font, color, size, and alignment of text, adding borders and backgrounds to elements, and positioning elements on the page. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, sit.</p>
+        <br>
+        <p id="p3">The TEXT-TRANSFORM property is employed to specify the letter case in which your text should appear. There are three available values: "uppercase," "lowercase," and "capitalize." "Uppercase" converts all letters to uppercase (similar to using the caps lock key), "lowercase" transforms 
+          <p id="p4">letters to lowercase, and "capitalize" instructs the </p> 
+          rule to capitalize the first letter of each word.</p>
+        <br>
+        <p id="p5">The PADDING property 
+          <p id="p6">is used to add space between the content of an element and its border. The value of the padding property can be set in pixels, ems, or percentages. The padding property can be set for all four sides of an element (padding: 10px;) or for individual sides (padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: 40px;).</p>
+        </p>
+        <br>
+        <h1 style="border: solid navy; padding: 10px;">Property for Borders: border</h1>
+        <br>
+        <h1 style="border: solid navy; border-radius: 25px;">Property for Rounded Corners: border-radius</h1>
+        <br>
+        <a href="#" >Styling Links: Sets the CSS rule to make all unvisited links navy with no underline.</a>
+        <br>
+        
+        <h1>Property for List Styling (Ordered Lists): list-style-type</h1>
+        <ul class="ol">
+          <li>disc</li>
+          <li>circle</li>
+          <li>square</li>
+          <li>decimal</li>
+          <li>decimal-leading-zero</li>
+          <li>lower-roman</li>
+          <li>upper-roman</li>
+          <li>lower-alpha</li>
+          <li>upper-alpha</li>
+          <!-- Result: Sets the CSS rule to use circles as bullets for all unordered lists. -->
+        </ul>
+        <br>
+        <h1>Property for List Marker Image: list-style-image</h1>
+        <ul class="ul1">
+          <li>disc</li>
+          <li>circle</li>
+          <li>square</li>
+          <li>decimal</li>
+          <li>decimal-leading-zero</li>
+          <li>lower-roman</li>
+          <li>upper-roman</li>
+          <li>lower-alpha</li>
+          <li>upper-alpha</li>
+          <!-- - Result: Sets all unordered lists to use the specified image as the list marker. -->
+        </ul>
+        <br>
+        <h1>Sizing Elements</h1>
+        <p>You can specify the value in points (pt), pixels (px), centimeters (cm), millimeters (mm), inches (in), picas (pc), x-height (ex), em, or as a percentage of the page size.</p>
+        <br>
+        <img src="images/minion.png" width="167px" height="145px" alt="minion">
+        <br><br>
+        <h1>Text Wrapping:</h1>
+          <div class="wrapp">
+          <p>The WHITE-SPACE property is employed to ensure text wraps within the designated element. By default, text automatically wraps inside elements. The values for the WHITE-SPACE property are "normal" (default) and "nowrap," which disables text wrapping inside the element.</p>
+          </div>
+          <br>
+          <h1>Text Shadowing:</h1>
+          <p class="shad">
+            To add more visual impact to your text, you can utilize the TEXT-SHADOW property. Specify values for horizontal shadow, vertical shadow, blur distance, and shadow color. The value can be expressed in points (pt), pixels (px), centimeters (cm), millimeters (mm), inches (in), picas (pc), x-height (ex), or em.
+          </p>
+          <br><br><br>
+          <h1>Adjusting Image Opacity:</h1>
+          <p>You can control the transparency of an image or element using CSS by employing the OPACITY property and specifying a value ranging from 0.0 to 1.0.</p>
+          <img class="img1" src="/images/minion.png" width="100px" alt="">
+          <br><br>
+          <h1>Floating Images:</h1>
+          <p>When you want to position an image to the left or right of another element, you can utilize the FLOAT property. The FLOAT property offers two values: "left" and "right." The floated image will move as far left or right as possible, allowing any subsequent elements to wrap around it.</p>
+          <img class="img2" src="/images/red-box.png" width="100px">
+          <br><br><br>
+              <h1>Centering Images:</h1>
+              <p>To position an image in the center of its containing element using CSS, you can use a combination of CSS properties.</p>
+            <div class="centerImage">
+
+              <img class="img3" src="/images/minion.png" width="120px">
+              <br><br><br>
+            </div>
+
+
+
+
+      </div>
 
 
     <script src="script.js"></script>

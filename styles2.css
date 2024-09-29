@@ -1,0 +1,172 @@
+* {/*sets the margin, padding, and box-sizing to border-box*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;/*sets the font family to Arial and sans-serif*/
+    background-color: black;/*sets the background color to black*/
+    color: white;/*sets the text color to white*/
+    background-image: url("/images/epcot2.jpg");/*sets the background image to epcot2.jpg*/
+    background-attachment:fixed;/*sets the background image to fixed*/
+    /* background-repeat: repeat-y; */
+    /*above repeats the background image vertically*/
+}
+
+nav {/*creates a navigation bar*/
+    display: flex;/*displays the navigation bar as a flexbox*/
+    justify-content: space-between;/*aligns the items in the navigation bar to the left and right*/
+    align-items: center;/*aligns the items in the navigation bar to the center*/
+    min-height: 10px;/*sets the minimum height of the navigation bar to 10px*/
+    background-color: #333;/*sets the background color of the navigation bar to #333*/
+    color: white;/*sets the text color of the navigation bar to white*/
+}
+
+.nav-left {
+    margin:10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.nav-right {
+list-style-type: none;
+margin: 10px;
+padding: 10px;
+display: flex;
+
+}
+
+.nav-right li {
+    margin-left: 20px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+    color: #f1c40f;
+}
+
+.nav-right a.active {
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+.content {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    color: maroon;
+    font-style: italic;
+    letter-spacing: 5pt;/*adds space between the letters*/
+}/*adds color to the h1 text and styles it*/
+
+#heading1 {
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Introductions {
+    font-family: Georgia;
+    color: green;
+}
+
+.Speech {
+    font-family: Georgia;
+    color: red;
+}
+
+#para1 {
+    font-weight: bold;/*adds bold style to the text*/
+    font-style: italic;/*adds bold and italic styles to the text*/
+    color: blue;/*adds color to the text*/
+    margin-left: 30px;/*adds a margin to the left of the paragraph*/
+}
+
+#li1 {
+    color: red;
+    text-decoration: underline;
+
+}
+/*Establishes the CSS rule to underline all text within paragraphs and specifies that no underlines should be applied to any links.*/
+a {
+    color: white;
+    text-decoration: none;
+    color: navy; text-decoration: none;
+}
+
+/*  create an indentation for the first line of a paragraph*/
+#p2 {
+    font-family: verdana, georgia;/*specifies the font family for the paragraph*/
+    text-align: center;/*centers the text in the paragraph*/
+    text-indent: 35px;/* creates an indentation for the first line of a paragraph*/
+    line-height: 2.0;/*sets the line height to 2.0*/
+}
+
+#p3 {
+    text-transform: uppercase;/*transforms the text to uppercase*/
+}
+
+#p4 {
+    text-transform: lowercase;/*transforms the text to lowercase*/
+    font-size: 1.5em;/*sets the font size to 1.5em*/
+}
+
+#p5 {
+    text-transform: capitalize;/*transforms the text to capitalize*/
+    font-size: 1.5em;/*sets the font size to 1.5em*/
+    padding: 30px;/*adds padding to the paragraph*/
+}
+
+.ol {
+    list-style-type: circle;/*sets the list style type to circle*/
+    font-size: 1.5em;/*sets the font size to 1.5em*/
+    padding: 30px;/*adds padding to the list*/
+
+}
+
+.ul1 {
+    list-style-image: url(sample.jpg);/*sets the list style image to sample.jpg*/
+    font-size: 1.5em;/*sets the font size to 1.5em*/
+    padding: 30px;/*adds padding to the list*/
+}
+
+.wrapp {
+    white-space: nowrap;/*prevents the text from wrapping to the next line*/
+}
+
+.shad {
+    text-shadow: 2px 2px 5px rgba(196, 181, 196, 0.5);/*adds a shadow to the text*/
+    color: blue;/*adds color to the text*/
+}
+
+.img1 {
+    opacity: 0.5;/*sets the opacity of the image to 0.5*/
+}
+
+.img2 {
+float: right;
+}
+
+.centerImage {/*sets the image to float to the left*/
+    display: flex;/*displays the image as a flexbox*/
+    justify-content: center;/*aligns the image to the center*/
+    align-items: center;/*aligns the image to the center*/
+}   
+
+
+
+
