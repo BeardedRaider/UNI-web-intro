@@ -10,6 +10,7 @@ body {
     color: white;/*sets the text color to white*/
     background-image: url("/images/epcot2.jpg");/*sets the background image to epcot2.jpg*/
     background-attachment:fixed;/*sets the background image to fixed*/
+    background-size: cover;/*sets the background image to cover*/
     /* background-repeat: repeat-y; */
     /*above repeats the background image vertically*/
 }
@@ -145,7 +146,7 @@ a {
 }
 
 .wrapp {
-    white-space: nowrap;/*prevents the text from wrapping to the next line*/
+    white-space: wrap;/*prevents the text from wrapping to the next line*/
 }
 
 .shad {
