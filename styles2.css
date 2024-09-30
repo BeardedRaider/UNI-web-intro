@@ -5,6 +5,8 @@
 }
 
 body {
+    margin-left: 20px;
+    margin-right: 20px;
     font-family: Arial, sans-serif;/*sets the font family to Arial and sans-serif*/
     background-color: black;/*sets the background color to black*/
     color: white;/*sets the text color to white*/
@@ -80,7 +82,9 @@ h1 {
     color: maroon;
     font-style: italic;
     letter-spacing: 5pt;/*adds space between the letters*/
+    padding-left: 20%;
 }/*adds color to the h1 text and styles it*/
+
 
 #heading1 {
     color: blue;
@@ -161,7 +165,7 @@ a {
 
 .shad {
     text-shadow: 2px 2px 5px rgba(196, 181, 196, 0.5);/*adds a shadow to the text*/
-    color: blue;/*adds color to the text*/
+    color: rgb(191, 0, 255);/*adds color to the text*/
 }
 
 .img1 {
@@ -176,7 +180,17 @@ float: right;
     display: flex;/*displays the image as a flexbox*/
     justify-content: center;/*aligns the image to the center*/
     align-items: center;/*aligns the image to the center*/
-}   
+}
+
+
+
+.container2 {
+    width: 50%;
+    padding: 20px;
+    margin-left: 20px;
+    justify-content: center;
+    list-style-type: none;
+}
 
 
 
