@@ -69,6 +69,13 @@ display: flex;
     padding: 20px;
 }
 
+.container2 {
+    padding: 20px;
+    margin-left: 20px;
+    justify-content: center;
+    list-style-type: none;
+}
+
 h1 {
     color: maroon;
     font-style: italic;
@@ -78,6 +85,8 @@ h1 {
 #heading1 {
     color: blue;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-align: center;
 }
 
 .Introductions {
@@ -111,6 +120,7 @@ a {
 
 /*  create an indentation for the first line of a paragraph*/
 #p2 {
+    border: #f1c40f 2px solid;/*adds a border to the paragraph*/
     font-family: verdana, georgia;/*specifies the font family for the paragraph*/
     text-align: center;/*centers the text in the paragraph*/
     text-indent: 35px;/* creates an indentation for the first line of a paragraph*/
