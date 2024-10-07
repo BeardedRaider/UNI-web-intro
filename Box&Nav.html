@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
 
-    <title>Tables</title>
+    <title>Box & Nav</title>
   </head>
   <body>
+    <!-- Horizontal Navigation Bar -->
     <nav>
         <div class="nav-left">
           Shane Cummings<br />
@@ -23,13 +24,40 @@
           <li><a href="DebugTask.html">Debug</a></li>
           <li><a href="css.html">CSS</a></li>
           <li><a href="Box&Nav.html" class="active">Box & Nav</a></li>
-          <li><a href="java.html" class="active">Java</a></li>
+          <li><a href="java.html">Java</a></li>
           <li><a href="jQuery.html">jQuery</a></li>
           <li><a href="week6.html">Other</a></li>
         </ul>
       </nav>
 
+    <!-- Vertical Navigation Bar -->
+    <aside><!-- aside is used to define content aside from the content (like a sidebar)-->
+        <ul class="vertnav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </aside>
 
+    <div class="page">
+        <h1>Box Model & Navigation</h1>
+        <div class="paragraph-container">
+          <p>
+              The box model is a fundamental concept in CSS. It defines the design and layout of elements on a webpage. The box model consists of four parts: content, padding, border, and margin. 
+          </p>
+        </div>  
+
+    <!-- Box Model Examples -->
+        <section class="box-models">
+            <div class="box one">
+                <p>This is the first box. It has different padding, margins, and borders.</p>
+            </div>
+            <div class="box two">
+                <p>This is the second box with different padding, margins, and borders.</p>
+            </div>
+        </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

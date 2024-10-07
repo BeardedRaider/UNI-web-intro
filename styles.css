@@ -8,7 +8,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
+    
 }
+
+/* -----Navigation -----*/
 
 nav {
     display: flex;
@@ -17,6 +20,10 @@ nav {
     min-height: 10px;
     background-color: #333;
     color: white;
+    padding: 10px 20px; /* Add padding to the nav bar */
+
+    overflow: hidden;
+    z-index: 1;
 }
 
 .nav-left {
@@ -53,11 +60,48 @@ display: flex;
     color: #f1c40f;
 }
 
+/* Vertical Navigation Bar */
+
+.vertnav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.vertnav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    background-color: #333;
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    left: 0;
+}
+
+ul.vertnav li {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul.vertnav li a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+ul.vertnav li a:hover {
+    background-color: #f1c40f;
+}
+
+
 .content {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
+    margin: 10px;/* Margin around the content */
+    display: flex;/* Flexbox layout */
+    justify-content: center;/* Center the content */
+    font-size: 30px;/* Font size of the content */
 }
 
 .container {
@@ -65,3 +109,61 @@ display: flex;
 }
 
 
+/* Page Styles */
+.page {
+padding: 20px;/* Add padding to the page*/
+text-align: center;/* Center the content */
+}
+
+.page h1 {
+    font-size: 50px;
+margin-bottom: 20px;
+}
+
+.page p {
+    margin-bottom: 40px;
+    font-size: 20px;
+    overflow: hidden;/* Add overflow to the paragraph */
+}
+
+/* Paragraph container */
+.paragraph-container {
+    max-width: 600px; /* Set a maximum width for the container */
+    margin: 0 auto 40px auto; /* Center the container and add bottom margin */
+    padding: 20px; /* Add padding inside the container */
+    background-color: #444; /* Background color for the container */
+    border-radius: 5px; /* Rounded corners */
+    text-align: left; /* Align text to the left */
+}
+
+/* Box Model Examples */
+.box-models {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    padding: 15px;
+    border: 5px solid #333;/* Border around the box */
+    background-color: red; /* Background color of the box */
+    color: black;/* Text color */
+    
+}
+
+/* First Box Model */
+.box.one {
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: 3px solid blue;
+    
+}
+
+/* Second Box Model */
+.box.two {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    border: 5px solid rgb(213, 22, 184);
+}
