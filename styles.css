@@ -167,3 +167,63 @@ margin-bottom: 20px;
     margin: 10px;
     border: 5px solid rgb(213, 22, 184);
 }
+
+/*css for the table*/
+.tableStyle {
+    width: 100%;
+    margin: 20px 0;
+    padding-left: 20px;
+
+}
+/* Chapter 21.1 - Table Borders */
+table, th, td {
+    border: 2px solid rgb(224, 224, 224);
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+/* Chapter 21.2 - Collapsed Borders */
+.collapsed-table {
+    border-collapse: collapse;
+
+}
+.collapsed-table th, .collapsed-table td {
+    border: 2px solid blue;
+}
+
+/* Chapter 21.3 - Table Width and Cell Height */
+.custom-size-table {
+
+    width: 80%;
+}
+.custom-size-table th {
+    height: 50px;
+
+}
+.custom-size-table td {
+    height: 25px;
+}
+/* Chapter 21.4 - Table Background Color */
+.colored-table th {
+    background-color: green;
+}
+.colored-table td {
+    background-color: brown;
+}
+/* Chapter 21.5 - Table Text Alignment */
+.aligned-table th {
+    text-align: center;
+    vertical-align: top;
+}
+.aligned-table td {
+    text-align: left;
+    vertical-align: bottom;
+}
+/* Chapter 21.6 - Table Padding */
+.padded-table th {
+    padding: 10px;
+}
+.padded-table td {
+    padding: 20px;
+}
