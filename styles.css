@@ -271,7 +271,7 @@ th, td {
     width: 100%;
     border-collapse: collapse;
     margin-top: 40px; /* Create space for the header */
-    border: 10px solid yellow; /* Initial border color */
+    border: 20px solid yellow; /* Initial border color */
     animation: changeBorder 10s infinite linear;
     position: relative;
 }
@@ -282,8 +282,8 @@ th, td {
     top: -40px; /* Adjust to place the h1 on the border */
     left: 50%;
     transform: translateX(-50%);
-    margin: 0;
-    padding: 5px 10px;
+    margin: 10px;
+    padding: 15px 10px;
     animation: changeHeaderBackground 10s infinite linear;
 }
 
@@ -320,10 +320,10 @@ th, td {
         border-color: orange;
     }
     50% {
-        border-color: pink;
+        border-color: rgb(170, 7, 34);
     }
     75% {
-        border-color: lightblue;
+        border-color: rgb(168, 11, 216);
     }
     100% {
         border-color: yellow;
