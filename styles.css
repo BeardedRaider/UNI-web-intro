@@ -175,7 +175,26 @@ margin-bottom: 20px;
     padding-left: 20px;
 
 }
-/* Chapter 21.1 - Table Borders */
+
+
+
+
+/*---------- Chapter 21.1 - Table Borders---------- */
+
+.table-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    padding: 20px;
+}
+
+.tableStyle {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #222121;
+}
+
 table, th, td {
     border: 2px solid rgb(224, 224, 224);
 }
@@ -227,3 +246,118 @@ th, td {
 .padded-table td {
     padding: 20px;
 }
+
+/*---------- Task wk 5 - Table Styles ---------- */
+/* Container that holds the table and applies the background animation */
+/* Container that holds the table and applies the background animation */
+.style-container {
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Position the table and header relative to their container */
+.stylishTable {
+    position: relative;
+    width: 100%;
+    animation: moveTable 10s infinite linear;
+}
+
+/* Styling the table */
+.stylishTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px; /* Create space for the header */
+    border: 10px solid yellow; /* Initial border color */
+    animation: changeBorder 10s infinite linear;
+    position: relative;
+}
+
+/* Position the header at the top of the table */
+.stylishTable h1 {
+    position: absolute;
+    top: -40px; /* Adjust to place the h1 on the border */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 5px 10px;
+    animation: changeHeaderBackground 10s infinite linear;
+}
+
+/* Header styles */
+.stylishTable th {
+    background-color: green;
+    color: rgb(218, 211, 211);
+    padding: 10px;
+    text-align: left;
+}
+
+/* Row styles with alternating colors */
+.stylishTable tr:nth-child(even) { /* Change background color */
+    background-color: black;
+}
+.stylishTable tr:nth-child(odd) { /* Change background color */
+    background-color: rgb(181, 184, 40);
+}
+
+/* Hover effect to change background color */
+.stylishTable tr:hover:nth-child(even) {
+    background-color: lightgreen;
+}
+.stylishTable tr:hover:nth-child(odd) {
+    background-color: lightcoral;
+}
+
+/* Background color change for the container */
+@keyframes changeBorder {
+    0% {
+        border-color: yellow;
+    }
+    25% {
+        border-color: orange;
+    }
+    50% {
+        border-color: pink;
+    }
+    75% {
+        border-color: lightblue;
+    }
+    100% {
+        border-color: yellow;
+    }
+}
+
+/*Animation for table movement */
+@keyframes moveTable {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 50%);
+        }
+    50% {
+        top: calc(50vh - 200px);
+        left: calc(100% - 50%);
+    }
+    75% {
+        top: calc(50vh - 200px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+/* Adjust padding and border */
+.stylishTable td, .stylishTable th {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
