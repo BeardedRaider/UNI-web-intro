@@ -1,0 +1,103 @@
+<!-- Shane Cummings
+ b01740631
+ Yr 3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+
+    <title>JavaScript Example Page</title>
+    <script src="script.js"></script>
+  </head>
+  
+  <!-- onload event handler -->
+  <body onload="displayGreeting()">
+    <nav>
+        <div class="nav-left">
+          Shane Cummings<br />
+          B01740631
+        </div>
+        <ul class="nav-right">
+          <li><a href="index.html">Images Maps</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="DebugTask.html">Debug</a></li>
+          <li><a href="css.html">CSS</a></li>
+          <li><a href="Box&Nav.html">Box & Nav</a></li>
+          <li><a href="tableCSS.html">Table CSS</a></li>
+          <li><a href="java.html" class="active">Java</a></li>
+          <li><a href="jQuery.html">jQuery</a></li>
+          <li><a href="week6.html">Other</a></li>
+        </ul>
+      </nav>
+      <!-- End of Navigation Bar -->
+      <section class="sectionCon">
+        <div class="container2">
+          <h1 id="greeting"></h1>
+          <div class="card2">
+            <img src="images/profile.png" alt="Profile Picture">
+            <h2>Shane Cummings</h2>
+            <p>B01740631</p>
+            <button onclick="toggleCard()">Show Contact Info</button>
+            <div id="contact-card2">
+              <h3>Contact Information</h3>
+              <p>Email: your.email@example.com</p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Location: Glasgow, Scotland</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectionCon">
+        <div class="js-demo">
+          <h1>JavaScript Simple Examples</h1>
+          <div class="welcome-message"> <!-- displays message -->
+            <h3>Enter Your Name To Get a Welcome Message:</h3><!-- prompt -->
+            <input type="text" id="nameInput" placeholder="Enter Your Name"><!-- button to trigger function -->
+            <button onclick="showWelcomeMessage()">Submit</button>
+            <p id="displayMessage"></p>
+          </div>
+        
+
+        <!-- Example 2: Simple Math Operations -->
+        <div class="math-demo">
+          <h3>Simple Math Operation:</h3>
+          <button onclick="showSum()" id="btnSum">Click to Calculate 5 + 3</button>
+          <p id="sumResult"></p>
+        </div>
+        </div>
+      </section>
+
+      <section>
+        <!-- Example 3: Color Changer -->
+        <div class="color-demo">
+          <h3>Choose a background color for the box:</h3>
+          <select id="colorSelect" onchange="changeColor()">
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+          </select>
+          <div id="colorBox"></div>
+        </div>
+        <!-- Example 3: Color Changer with Buttons -->
+        <div class="color-demo">
+          <h3>Choose a background color for the box:</h3>
+          <div class="color-options">
+            <button class="color-btn" style="background-color: white;" onclick="changeColor2('white')"></button>
+            <button class="color-btn" style="background-color: red;" onclick="changeColor2('red')"></button>
+            <button class="color-btn" style="background-color: blue;" onclick="changeColor2('blue')"></button>
+            <button class="color-btn" style="background-color: green;" onclick="changeColor2('green')"></button>
+            <button class="color-btn" style="background-color: yellow;" onclick="changeColor2('yellow')"></button>
+          </div>
+          <div id="colorBox2"></div>
+        </div>
+      </section>
+
+    
+  </body>
+</html>
