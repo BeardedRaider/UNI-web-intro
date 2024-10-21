@@ -545,6 +545,8 @@ button:hover {
     background-color: white;
     border: 2px solid #a60fd4;
     border-radius: 10px;
+    transition: background-color 0.8s; /* Smooth background transition */
+
 }
 
   /* Color button options */
@@ -565,5 +567,6 @@ button:hover {
 }
 
 .color-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.2); /* Increase the size a bit on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
 }
