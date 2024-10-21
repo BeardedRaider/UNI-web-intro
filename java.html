@@ -57,32 +57,42 @@
         <div class="container2">
           <h1 id="greeting2"></h1>
           <div class="card2">
-            <label for="salaryInput">Please Enter YourSalary ($):</label>
-            <input type="number" id="salaryInput" placeholder="Enter salary" min="0">
-            <br><br>
-            <label for="taxInput">Enter Your Tax Percentage (%):</label>
-            <input type="number" id="taxInput" placeholder="Enter tax percentage" min="0" max="100">
-            <br><br>
-            <button onclick="calculateNetSalary()">Calculate</button>
-            <br><br>
-            <p id="salaryResult"></p>
-            <p id="incomeCategory"></p>
-            <p id="errorMessage" style="color: red;"></p>
+            <div class="cal-inputs">
+              <label for="salaryInput">Salary ($):</label>
+              <input type="number" id="salaryInput" placeholder="Enter salary" min="0">
+        
+              <label for="taxInput">Tax Percentage (%):</label>
+              <input type="number" id="taxInput" placeholder="Enter tax percentage" min="0" max="100">
+        
+              <button class="calc-btn" onclick="calculateNetSalary()">Calculate</button>
+            </div>
+            
+            <!-- Displaying the Income Calculator Results -->
+            <div class="cal-results">
+              <p id="salaryResult"></p>
+              <p id="incomeCategory"></p>
+            </div>
           </div>
         </div>
-
+      <!-- Card 3: BMI Calculator -->
         <div class="container2">
           <h1 id="greeting3"></h1>
           <div class="card2">
-            <img src="images/profile.png" alt="Profile Picture">
-            <h2>Shane Cummings</h2>
-            <p>B01740631</p>
-            <button onclick="toggleCard()">Show Contact Info</button>
-            <div id="contact-card2">
-              <h3>Contact Information</h3>
-              <p>Email: your.email@example.com</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Location: Glasgow, Scotland</p>
+            <div class="bmi-inputs">
+              <label for="heightInput">Height (cm):</label>
+              <input type="number" id="heightInput" placeholder="Enter height in centimeters" min="0">
+        
+              <label for="weightInput">Weight (kg):</label>
+              <input type="number" id="weightInput" placeholder="Enter weight in kilograms" min="0">
+        
+              <button class="calc-btn" onclick="calculateBMI()">Calculate BMI</button>
+            </div>
+            
+            <!-- Displaying the BMI Result -->
+            <div class="bmi-results">
+              <p id="bmiResult"></p>
+              <p id="bmiCategory"></p>
+              <p id="bmiErrorMessage" style="color: red;"></p>
             </div>
           </div>
         </div>

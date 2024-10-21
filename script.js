@@ -65,7 +65,7 @@ function calculateNetSalary() {
 
   // Validate inputs
   if (isNaN(salary) || isNaN(tax) || salary < 0 || tax < 0 || tax > 100) {
-    alert('Please enter a valid number for salary and tax (tax should be between 0 and 100).');
+    alert('Please enter a valid numbers only, for salary and tax (tax should be between 0 and 100).');
     return; // Exit the function
   }
 
@@ -85,4 +85,60 @@ function calculateNetSalary() {
   // Display the results
   salaryResult.innerHTML = 'Net Salary: $' + netSalary.toFixed(2);
   incomeCategory.innerHTML = 'Income Category: ' + category;
+}
+
+// Function to calculate BMI
+function calculateBMI() {
+  var heightCm = parseFloat(document.getElementById('heightInput').value);
+  var weightKg = parseFloat(document.getElementById('weightInput').value);
+  var bmiResult = document.getElementById('bmiResult');
+  var bmiCategory = document.getElementById('bmiCategory');
+  var bmiErrorMessage = document.getElementById('bmiErrorMessage');
+
+  // Clear previous results and errors
+  bmiResult.innerHTML = '';
+  bmiCategory.innerHTML = '';
+  bmiErrorMessage.innerHTML = '';
+
+  // Validate inputs
+  if (isNaN(heightCm) || isNaN(weightKg) || heightCm <= 0 || weightKg <= 0) {
+    bmiErrorMessage.innerHTML = 'Please enter valid positive numbers for both height and weight.';
+    return;
+  }
+
+  // Convert height to meters
+  var heightM = heightCm / 100;
+
+  // Calculate BMI
+  var bmi = weightKg / (heightM * heightM);
+
+  // Round BMI to 2 decimal places
+  var roundedBMI = bmi.toFixed(2);
+
+  // Determine BMI category
+  var category = '';
+  var color = '';
+
+  if (roundedBMI < 18.5) {
+    category = 'Underweight';
+    color = 'Lightblue';
+  } else if (roundedBMI >= 18.5 && roundedBMI <= 24.9) {
+    category = 'Healthy Weight';
+    color = 'LightGreen';
+  } else if (roundedBMI >= 25 && roundedBMI <= 29.9) {
+    category = 'Overweight';
+    color = 'orange';
+  } else {
+    category = 'Obese';
+    color = 'red';
+  }
+
+  // Display the category with the appropriate color
+var bmiCategoryElement = document.getElementById('bmiCategory');
+bmiCategoryElement.textContent = category;
+bmiCategoryElement.style.color = color;
+
+  // Display the results
+  bmiResult.innerHTML = 'Your BMI: ' + roundedBMI;
+  bmiCategory.innerHTML = 'Category: ' + category;
 }

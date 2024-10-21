@@ -468,6 +468,18 @@ td {
   display: none;
 }
 
+/* INCOME calculator STYLES */
+
+.calc-btn{
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 /* Remove input arrows for number inputs
 WebKit Browsers (Chrome, Safari, etc.) */
 input[type="number"]::-webkit-outer-spin-button,
@@ -480,14 +492,75 @@ input[type="number"] {
     -moz-appearance: textfield; /* Firefox */
 }
 
+.cal-inputs {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cal-inputs label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cal-inputs input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+}
+
+.cal-results p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+
+/*BMI Calculator styles*/
+
+
+.bmi-inputs {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cal-inputs {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.bmi-inputs, .cal-inputs label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bmi-inputs input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+}
+
+.bmi-results p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
 /* JS Examples Section */
 .js-demo {
   margin-top: 40px;
   text-align: center;
   border: solid 2px #007bff;
 }
-
-
 
 .welcome-message {
     font-size: 30px;
