@@ -420,9 +420,24 @@ td {
 
 /*---------- Exploring JavaScript ---------- */
 
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .container2 {
   text-align: center;
   margin-top: 20px;
+  border: solid 2px #007bff;
+
+}
+
+.sectionCon{
+  border: solid 2px #d6d9dd;
+  padding: 20px;
+
 }
 
 .card2 {
@@ -453,12 +468,26 @@ td {
   display: none;
 }
 
+/* Remove input arrows for number inputs
+WebKit Browsers (Chrome, Safari, etc.) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
 /* JS Examples Section */
 .js-demo {
   margin-top: 40px;
   text-align: center;
   border: solid 2px #007bff;
 }
+
+
 
 .welcome-message {
     font-size: 30px;
@@ -570,3 +599,4 @@ button:hover {
     transform: scale(1.2); /* Increase the size a bit on hover */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
 }
+

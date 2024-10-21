@@ -33,7 +33,10 @@
         </ul>
       </nav>
       <!-- End of Navigation Bar -->
-      <section class="sectionCon">
+      <!-- Start of Main Content -->
+      <!-- Profile Card -->
+    <section class="sectionCon">
+      <div class="cards-container">
         <div class="container2">
           <h1 id="greeting"></h1>
           <div class="card2">
@@ -49,7 +52,43 @@
             </div>
           </div>
         </div>
-      </section>
+
+      <!-- Card 2: Net Salary Calculator -->
+        <div class="container2">
+          <h1 id="greeting2"></h1>
+          <div class="card2">
+            <label for="salaryInput">Please Enter YourSalary ($):</label>
+            <input type="number" id="salaryInput" placeholder="Enter salary" min="0">
+            <br><br>
+            <label for="taxInput">Enter Your Tax Percentage (%):</label>
+            <input type="number" id="taxInput" placeholder="Enter tax percentage" min="0" max="100">
+            <br><br>
+            <button onclick="calculateNetSalary()">Calculate</button>
+            <br><br>
+            <p id="salaryResult"></p>
+            <p id="incomeCategory"></p>
+            <p id="errorMessage" style="color: red;"></p>
+          </div>
+        </div>
+
+        <div class="container2">
+          <h1 id="greeting3"></h1>
+          <div class="card2">
+            <img src="images/profile.png" alt="Profile Picture">
+            <h2>Shane Cummings</h2>
+            <p>B01740631</p>
+            <button onclick="toggleCard()">Show Contact Info</button>
+            <div id="contact-card2">
+              <h3>Contact Information</h3>
+              <p>Email: your.email@example.com</p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Location: Glasgow, Scotland</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>  
+    </section>
 
       <section class="sectionCon">
         <div class="js-demo">
@@ -63,11 +102,11 @@
         
 
         <!-- Example 2: Simple Math Operations -->
-        <div class="math-demo">
-          <h3>Simple Math Operation:</h3>
-          <button onclick="showSum()" id="btnSum">Click to Calculate 5 + 3</button>
-          <p id="sumResult"></p>
-        </div>
+          <div class="math-demo">
+            <h3>Simple Math Operation:</h3>
+            <button onclick="showSum()" id="btnSum">Click to Calculate 5 + 3</button>
+            <p id="sumResult"></p>
+          </div>
         </div>
       </section>
 
