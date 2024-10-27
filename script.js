@@ -1,12 +1,15 @@
+// Run multiple functions on page load
+window.onload = function() {
+  displayGreeting();
+  displayBooleanResults();
+  displayComparisonResults();
+};
+
 // Display a greeting when the page loads
 function displayGreeting() {
-  //this is the function that displays the greeting
-  document.getElementById("greeting").innerHTML =
-    "Hello, Welcome to JavaScript!"; //this is the id of the greeting
-    document.getElementById("greeting2").innerHTML =
-    "Income Calculator"; //this is the id of the greeting//this is the id of the greeting  
-    document.getElementById("greeting3").innerHTML =
-    "BMI Calculator"; //this is the id of the greeting//this is the id of the greeting
+  document.getElementById("greeting").innerHTML = "Hello, Welcome to JavaScript!";
+  document.getElementById("greeting2").innerHTML = "Income Calculator";
+  document.getElementById("greeting3").innerHTML = "BMI Calculator";
 }
 
 // Toggle the visibility of the contact card
@@ -142,3 +145,42 @@ bmiCategoryElement.style.color = color;
   bmiResult.innerHTML = 'Your BMI: ' + roundedBMI;
   bmiCategory.innerHTML = 'Category: ' + category;
 }
+// ------Expressions and Control Flow
+// Display Boolean expressions results
+function displayBooleanResults() {
+  const booleanResults = document.getElementById("booleanResults");
+  let results = `
+    a: ${42 > 3}<br>
+    b: ${91 < 4}<br>
+    c: ${8 == 2}<br>
+    d: ${4 < 17}
+  `;
+  booleanResults.innerHTML = results;
+}
+
+// Example of conditional statements
+function checkNewYear() {
+  let day_number = 330;  // Assume today's day number in a non-leap year
+  let days_to_new_year = 366 - day_number;
+
+  const newYearMessage = document.getElementById("newYearMessage");
+  if (days_to_new_year < 30) {
+    newYearMessage.innerHTML = "It's nearly New Year!";
+  } else {
+    newYearMessage.innerHTML = "It's a long time to go until New Year.";
+  }
+}
+
+// Display comparison operators results
+function displayComparisonResults() {
+  const comparisonResults = document.getElementById("comparisonResults");
+  let a = 7, b = 11;
+  let results = `
+    a > b: ${a > b}<br>
+    a < b: ${a < b}<br>
+    a >= b: ${a >= b}<br>
+    a <= b: ${a <= b}
+  `;
+  comparisonResults.innerHTML = results;
+}
+

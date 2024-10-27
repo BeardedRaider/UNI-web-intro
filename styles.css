@@ -673,3 +673,39 @@ button:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
 }
 
+/* Expressions and Operators Section */
+/* Expressions and Control Flow Section */
+.sectionCon2 {
+  padding: 20px;
+  border: solid 2px #d6d9dd;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.expression-example, .conditional-example, .comparison-example {
+  margin-bottom: 20px;
+  padding: 10px;
+  
+  /* background-color: #e9ecef; */
+  border-radius: 5px;
+}
+
+.sectionCon2 h3 {
+  color: #007bff;
+}
+
+.sectionCon2 button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  /* color: white; */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sectionCon2 button:hover {
+  background-color: #218838;
+}
+
