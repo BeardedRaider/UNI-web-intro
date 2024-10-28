@@ -184,3 +184,29 @@ function displayComparisonResults() {
   comparisonResults.innerHTML = results;
 }
 
+// Example 1: Simple Function with Arguments
+function displayItems(...items) {
+  let result = items.join(", ");
+  document.getElementById("itemsList").innerHTML = "Items: " + result;
+}
+
+// Example 2: Using an Object
+function showUserInfo() {
+  let user = {
+    name: "Shane Cummings",
+    location: "Glasgow",
+    email: "your.email@example.com"
+  };
+  let info = `Name: ${user.name}, Location: ${user.location}, Email: ${user.email}`;
+  document.getElementById("userInfo").innerHTML = info;
+}
+
+// Example 3: Array Manipulation
+function displayFruits() {
+  let fruits = ["Apple", "Banana", "Orange"];
+  fruits.push("Grapes");
+  let result = fruits.join(", ");
+  document.getElementById("fruitsList").innerHTML = "Fruits: " + result;
+}
+
+
