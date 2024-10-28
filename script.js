@@ -234,3 +234,48 @@ function filterUsersByLocation(location) {
 }
 
 
+let persons = []; // Array to store person objects
+
+// Function to add person to array and display results if 4 people are entered
+function addPerson() {
+  let name = document.getElementById("name").value;
+  let grade = document.getElementById("grade").value.toUpperCase(); // Convert grade to uppercase for consistency
+
+  // Validate inputs
+  if (!name || !grade.match(/^[A-F]$/)) {
+    alert("Please enter a valid name and grade (A-F).");
+    return;
+  }
+
+  // Add new person to the array
+  persons.push({ name: name, grade: grade });
+
+  // Clear input fields
+  document.getElementById("name").value = "";
+  document.getElementById("grade").value = "";
+
+  // If we have 4 people, display the highest and lowest grades
+  if (persons.length === 4) {
+    // Convert letter grades to numeric equivalents for comparison
+    const gradeToNumber = { A: 1, B: 2, C: 3, D: 4, E: 5, F: 6 };
+
+    let highestPerson = persons.reduce((max, p) => (gradeToNumber[p.grade] < gradeToNumber[max.grade] ? p : max));
+    let lowestPerson = persons.reduce((min, p) => (gradeToNumber[p.grade] > gradeToNumber[min.grade] ? p : min));
+
+    document.getElementById("highestGrade").innerHTML = `Highest Grade: ${highestPerson.name} with a grade of ${highestPerson.grade}`;
+    document.getElementById("lowestGrade").innerHTML = `Lowest Grade: ${lowestPerson.name} with a grade of ${lowestPerson.grade}`;
+
+    // Clear the array after displaying results
+    persons = [];
+  }
+}
+
+// Function to clear results and reset the display
+function clearResults() {
+  persons = [];
+  document.getElementById("highestGrade").innerHTML = "";
+  document.getElementById("lowestGrade").innerHTML = "";
+  alert("Results have been cleared.");
+}
+
+

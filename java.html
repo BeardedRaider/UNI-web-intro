@@ -35,9 +35,32 @@
       <!-- End of Navigation Bar -->
       <!-- Start of Main Content -->
 
-      <section class="sectionCon3">
 
-        <!-- Different Example: String Manipulation -->
+      <!-- Person Array: Find Highest and Lowest Grade -->
+      <section class="person-array">
+        <h3>Enter Name and Grade for Each Person</h3>
+        <form id="personForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter name" required>
+            <br>
+            <label for="grade">Grade (A-F):</label>
+            <input type="text" id="grade" placeholder="Enter grade (A-F)" pattern="[A-Fa-f]" required>
+        
+            <br>
+          <button type="button" onclick="addPerson()">Add Person</button>
+          <button type="button" onclick="clearResults()">Clear Results</button>
+        </form>
+
+        <div id="gradeResults">
+          <h4>Results:</h4>
+          <br>
+          <p id="highestGrade"></p>
+          <p id="lowestGrade"></p>
+        </div>
+      </section>
+
+      <!-- Different Example: String Manipulation -->
+      <section class="sectionCon3">
         <div class="string-example">
           <h3>String Manipulation: Reverse a Word</h3>
           <input type="text" id="wordInput" placeholder="Enter a word">

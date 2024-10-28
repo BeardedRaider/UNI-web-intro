@@ -753,4 +753,50 @@ button:hover {
   background-color: #0056b3;
 }
 
+/* Styling for Person Array Section */
+.person-array {
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  width: 80%;
+  border: 2px solid #d1d8e0;
+}
+
+.person-array h3 {
+  text-align: center;
+  color: #007bff;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+  width: 25%;
+  padding: 5px;
+  margin: 10px 0;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+#gradeResults {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+}
+
+#highestGrade{
+  font-size: 16px;
+  font-weight: bold;
+  color: #30e814;
+}
+
+#lowestGrade {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e81414;
+}
+
+
 
