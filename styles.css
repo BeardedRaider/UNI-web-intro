@@ -762,6 +762,18 @@ button:hover {
   border: 2px solid #d1d8e0;
 }
 
+.btnClear{
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnClear:hover {
+  background-color: #c82333;
+}
+
 .person-array h3 {
   text-align: center;
   color: #007bff;
@@ -772,7 +784,7 @@ label {
 }
 
 input[type="text"], input[type="number"] {
-  width: 25%;
+  width: 100%;
   padding: 5px;
   margin: 10px 0;
   border: 2px solid #007bff;
@@ -798,5 +810,8 @@ input[type="text"], input[type="number"] {
   color: #e81414;
 }
 
-
+#allPeopleList {
+  margin-top: 20px;
+  list-style-type: none;
+}
 

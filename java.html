@@ -43,16 +43,20 @@
           <label for="name">Name:</label>
           <input type="text" id="name" placeholder="Enter name" required>
             <br>
-            <label for="grade">Grade (A-F):</label>
+            <label for="grade">Grade:</label>
             <input type="text" id="grade" placeholder="Enter grade (A-F)" pattern="[A-Fa-f]" required>
         
             <br>
           <button type="button" onclick="addPerson()">Add Person</button>
-          <button type="button" onclick="clearResults()">Clear Results</button>
+          <button class="btnClear" type="button" onclick="clearResults()">Clear Results</button>
         </form>
 
+        <h4>All Entered People:</h4>
+        <p id="allPeopleList"></p> 
         <div id="gradeResults">
-          <h4>Results:</h4>
+        <!-- New list for displaying all entered people -->
+        <!-- List for top and bottom student -->
+        <h4>Comparison Results:</h4>
           <br>
           <p id="highestGrade"></p>
           <p id="lowestGrade"></p>

@@ -254,14 +254,19 @@ function addPerson() {
   document.getElementById("name").value = "";
   document.getElementById("grade").value = "";
 
+    // Update the displayed list of all entered people
+    displayAllPeople();
+
   // If we have 4 people, display the highest and lowest grades
   if (persons.length === 4) {
     // Convert letter grades to numeric equivalents for comparison
     const gradeToNumber = { A: 1, B: 2, C: 3, D: 4, E: 5, F: 6 };
 
+    // Find the highest and lowest grades
     let highestPerson = persons.reduce((max, p) => (gradeToNumber[p.grade] < gradeToNumber[max.grade] ? p : max));
     let lowestPerson = persons.reduce((min, p) => (gradeToNumber[p.grade] > gradeToNumber[min.grade] ? p : min));
 
+    // Display the results
     document.getElementById("highestGrade").innerHTML = `Highest Grade: ${highestPerson.name} with a grade of ${highestPerson.grade}`;
     document.getElementById("lowestGrade").innerHTML = `Lowest Grade: ${lowestPerson.name} with a grade of ${lowestPerson.grade}`;
 
@@ -270,11 +275,24 @@ function addPerson() {
   }
 }
 
+// Function to display all entered people
+function displayAllPeople() {
+  const allPeopleList = document.getElementById("allPeopleList");
+  allPeopleList.innerHTML = ""; // Clear previous list
+
+  persons.forEach(person => {
+    let listItem = document.createElement("li");
+    listItem.textContent = `${person.name}: Grade ${person.grade}`;
+    allPeopleList.appendChild(listItem);
+  });
+}
+
 // Function to clear results and reset the display
 function clearResults() {
   persons = [];
   document.getElementById("highestGrade").innerHTML = "";
   document.getElementById("lowestGrade").innerHTML = "";
+  document.getElementById("allPeopleList").innerHTML = "";
   alert("Results have been cleared.");
 }
 
