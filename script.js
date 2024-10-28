@@ -209,4 +209,28 @@ function displayFruits() {
   document.getElementById("fruitsList").innerHTML = "Fruits: " + result;
 }
 
+// Different Example: Reverse a word
+function reverseWord() {
+  let word = document.getElementById("wordInput").value;
+  let reversed = word.split("").reverse().join("");
+  document.getElementById("reversedWord").innerHTML = "Reversed Word: " + reversed;
+}
+
+// Advanced Example: Array of Objects Manipulation
+function filterUsersByLocation(location) {
+  let users = [
+    { name: "Alice", location: "Glasgow", age: 28 },
+    { name: "Bob", location: "Edinburgh", age: 34 },
+    { name: "Charlie", location: "Glasgow", age: 29 },
+    { name: "Diana", location: "London", age: 24 }
+  ];
+
+  let filteredUsers = users
+    .filter(user => user.location === location)
+    .map(user => `${user.name} (Age: ${user.age})`)
+    .join(", ");
+
+  document.getElementById("filteredUsers").innerHTML = "Users in " + location + ": " + filteredUsers;
+}
+
 
