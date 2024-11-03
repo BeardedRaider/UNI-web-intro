@@ -815,3 +815,27 @@ input[type="text"], input[type="number"] {
   list-style-type: none;
 }
 
+/* generate random number styles */
+
+#generateButton, #generateButton1to10, #timedAlertButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#generateButton:hover, #generateButton1to10:hover, #timedAlertButton:hover {
+  background-color: #45a049;
+}
+
+#randomNumberDisplay, #randomNumberDisplay1to10, #countdownDisplay {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+

@@ -296,4 +296,42 @@ function clearResults() {
   alert("Results have been cleared.");
 }
 
+// Function to display random number 1-100
+document.addEventListener('DOMContentLoaded', function() {//this is the event listener for the random number tis ensures EL is looaded after the dom is loaded
+  document.getElementById('generateButton').addEventListener('click', function() {
+    const randomNumber = (Math.random() * 100).toFixed(2);//this is the formula for generating the random number
+    document.getElementById('randomNumberDisplay').innerText = `Random Number: ${randomNumber}`;
+  });
+
+  // Event listener for generating a random number between 1 and 10
+  let lastRandomNumber1to10 = null;
+  document.getElementById('generateButton1to10').addEventListener('click', function() {
+    let randomNumber;
+    do {
+      randomNumber = (Math.random() * 10 ).toFixed(0);
+    } while (randomNumber === lastRandomNumber1to10);
+    lastRandomNumber1to10 = randomNumber;
+    document.getElementById('randomNumberDisplay1to10').innerText = `Random Number: ${randomNumber}`;
+  });
+
+  // Event listener for activating a timed alert with countdown
+  document.getElementById('timedAlertButton').addEventListener('click', function() {//this is the event listener for the timed alert
+    let countdown = 3;//this is the countdown for the timed
+    const countdownDisplay = document.getElementById('countdownDisplay');//this is the countdown display
+    countdownDisplay.innerText = `Alert in ${countdown} `;//this is the countdown display
+
+    const interval = setInterval(function() {//this is the interval for the countdown
+      countdown -= 1;//this is the countdown
+      countdownDisplay.innerText = `Alert in ${countdown} `;//this is the countdown display
+      if (countdown <= 0) {//this is the if statement for the countdown
+        clearInterval(interval);//this is the clear interval
+        alert('Timed alert activated');//this is the alert for the timed alert
+        countdownDisplay.innerText = '';//this is the countdown display
+      }
+    }, 1000); // Update every second
+  });
+});
+
+
+
 
