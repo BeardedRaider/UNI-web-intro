@@ -907,3 +907,52 @@ input[type="text"], input[type="number"] {
   font-weight: bold;
 }
 
+/* City Population Styles */
+#cityForm {
+  margin-top: 10px;
+}
+
+#cityForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#cityForm input {
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#addCityButton,
+#findCityButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addCityButton:hover,
+#findCityButton:hover {
+  background-color: #45a049;
+}
+
+#cityList {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
+
+#cityList li {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+#highestPopulatedCity {
+  font-size: 18px;
+  font-weight: bold;
+  color: #30e814;
+}

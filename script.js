@@ -409,6 +409,64 @@ document.addEventListener('DOMContentLoaded', function() {//this is the event li
     }
   }
 
+// Event listener for adding a city
+const cityForm = document.getElementById('cityForm');
+const cityNameInput = document.getElementById('cityName');
+const cityPopulationInput = document.getElementById('cityPopulation');
+const cityAgeInput = document.getElementById('cityAge');
+const cityList = document.getElementById('cityList');
+const highestPopulatedCityDisplay = document.getElementById('highestPopulatedCity');
+let cities = [];
+
+document.getElementById('addCityButton').addEventListener('click', function() {
+  const cityName = cityNameInput.value;
+  const cityPopulation = parseInt(cityPopulationInput.value);
+  const cityAge = parseInt(cityAgeInput.value);
+
+  if (!cityName || isNaN(cityPopulation) || cityPopulation <= 0 || isNaN(cityAge) || cityAge <= 0) {
+    alert('Please enter valid city details.');
+    return;
+  }
+
+  // Add city to the array
+  cities.push({ cityName, population: cityPopulation, age: cityAge });
+
+  // Add city to the list
+  const listItem = document.createElement('li');
+  listItem.textContent = `${cityName} - Population: ${cityPopulation}, Age: ${cityAge}`;
+  cityList.appendChild(listItem);
+
+  // Clear input fields
+  cityNameInput.value = '';
+  cityPopulationInput.value = '';
+  cityAgeInput.value = '';
+
+  // Limit to 4 cities
+  if (cities.length >= 4) {
+    document.getElementById('addCityButton').disabled = true;
+  }
+});
+
+  document.getElementById('findCityButton').addEventListener('click', function() {
+    if (cities.length < 4) {
+      alert('Please enter details for exactly 4 cities.');
+      return;
+    }
+
+    // Find the highest populated city with age less than 100 years
+    let highestPopulatedCity = null;
+    cities.forEach(city => {
+      if (city.age < 100 && (!highestPopulatedCity || city.population > highestPopulatedCity.population)) {
+        highestPopulatedCity = city;
+      }
+    });
+
+    if (highestPopulatedCity) {
+      highestPopulatedCityDisplay.innerText = `${highestPopulatedCity.cityName} - Population: ${highestPopulatedCity.population}, Age: ${highestPopulatedCity.age}`;
+    } else {
+      highestPopulatedCityDisplay.innerText = 'No city with age less than 100 years found.';
+    }
+  });
 });
 
 
