@@ -956,3 +956,46 @@ input[type="text"], input[type="number"] {
   font-weight: bold;
   color: #30e814;
 }
+
+
+/* Quiz Styles */
+#quizForm {
+  margin-top: 10px;
+}
+
+#quizForm .question {
+  margin-top: 10px;
+}
+
+#quizForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#quizForm input {
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#submitQuizButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitQuizButton:hover {
+  background-color: #45a049;
+}
+
+#quizResult {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #30e814;
+}
