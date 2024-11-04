@@ -334,20 +334,34 @@ document.addEventListener('DOMContentLoaded', function() {//this is the event li
   
   // Event listener for adding an expense
   const expenseForm = document.getElementById('expenseForm');
+  const dailyBudgetInput = document.getElementById('dailyBudget');
   const expenseAmountInput = document.getElementById('expenseAmount');
   const expenseCategoryInput = document.getElementById('expenseCategory');
   const expenseList = document.getElementById('expenseList');
   const totalExpensesDisplay = document.getElementById('totalExpenses');
-  const expenseWarning = document.getElementById('expenseWarning');
+  const remainingBudgetDisplay = document.getElementById('remainingBudget');
   let totalExpenses = 0;
-  const expenseLimit = 100;
+  let dailyBudget = 0;
+  
+
+  document.getElementById('setBudgetButton').addEventListener('click', function() {
+    dailyBudget = parseFloat(dailyBudgetInput.value);
+
+    if (isNaN(dailyBudget) || dailyBudget <= 0) {
+      alert('Please enter a valid daily budget.');
+      return;
+    }
+
+    remainingBudgetDisplay.innerText = dailyBudget.toFixed(2);
+    updateRemainingBudgetColor(dailyBudget);
+  });
 
   document.getElementById('addExpenseButton').addEventListener('click', function() {
     const amount = parseFloat(expenseAmountInput.value);
     const category = expenseCategoryInput.value;
 
     if (isNaN(amount) || amount <= 0) {
-      alert('Please enter a valid amount.');
+      alert('Please enter a valid expense amount.');
       return;
     }
 
@@ -360,11 +374,14 @@ document.addEventListener('DOMContentLoaded', function() {//this is the event li
     totalExpenses += amount;
     totalExpensesDisplay.innerText = totalExpenses.toFixed(2);
 
-    // Check if total expenses exceed the limit
-    if (totalExpenses > expenseLimit) {
-      expenseWarning.style.display = 'block';
-    } else {
-      expenseWarning.style.display = 'none';
+    // Calculate remaining budget and update display
+    const remainingBudget = dailyBudget - totalExpenses;
+    remainingBudgetDisplay.innerText = remainingBudget.toFixed(2);
+    updateRemainingBudgetColor(remainingBudget);
+
+    // Notify user if they have spent their daily budget
+    if (remainingBudget <= 0) {
+      alert('You have spent your daily budget.');
     }
 
     // Clear input fields
@@ -376,9 +393,22 @@ document.addEventListener('DOMContentLoaded', function() {//this is the event li
   document.getElementById('clearExpensesButton').addEventListener('click', function() {
     totalExpenses = 0;
     totalExpensesDisplay.innerText = totalExpenses.toFixed(2);
-    expenseList.innerHTML = '';
-    expenseWarning.style.display = 'none';
+    remainingBudgetDisplay.innerText = dailyBudget.toFixed(2);
+    updateRemainingBudgetColor(dailyBudget);//#this is the update remaining budget color
+    expenseList.innerHTML = '';//this is the inner html for the expense list
   });
+
+  function updateRemainingBudgetColor(remainingBudget) {
+    const percentageLeft = (remainingBudget / dailyBudget) * 100;
+    if (percentageLeft > 50) {
+      remainingBudgetDisplay.style.color = 'green';
+    } else if (percentageLeft > 25) {
+      remainingBudgetDisplay.style.color = 'orange';
+    } else {
+      remainingBudgetDisplay.style.color = 'red';
+    }
+  }
+
 });
 
 
