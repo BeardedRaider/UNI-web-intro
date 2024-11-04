@@ -330,6 +330,55 @@ document.addEventListener('DOMContentLoaded', function() {//this is the event li
       }
     }, 1000); // Update every second
   });
+
+  
+  // Event listener for adding an expense
+  const expenseForm = document.getElementById('expenseForm');
+  const expenseAmountInput = document.getElementById('expenseAmount');
+  const expenseCategoryInput = document.getElementById('expenseCategory');
+  const expenseList = document.getElementById('expenseList');
+  const totalExpensesDisplay = document.getElementById('totalExpenses');
+  const expenseWarning = document.getElementById('expenseWarning');
+  let totalExpenses = 0;
+  const expenseLimit = 100;
+
+  document.getElementById('addExpenseButton').addEventListener('click', function() {
+    const amount = parseFloat(expenseAmountInput.value);
+    const category = expenseCategoryInput.value;
+
+    if (isNaN(amount) || amount <= 0) {
+      alert('Please enter a valid amount.');
+      return;
+    }
+
+    // Add expense to the list
+    const listItem = document.createElement('li');
+    listItem.textContent = `${category}: $${amount.toFixed(2)}`;
+    expenseList.appendChild(listItem);
+
+    // Update total expenses
+    totalExpenses += amount;
+    totalExpensesDisplay.innerText = totalExpenses.toFixed(2);
+
+    // Check if total expenses exceed the limit
+    if (totalExpenses > expenseLimit) {
+      expenseWarning.style.display = 'block';
+    } else {
+      expenseWarning.style.display = 'none';
+    }
+
+    // Clear input fields
+    expenseAmountInput.value = '';
+    expenseCategoryInput.value = 'Food';
+  });
+
+  // Event listener for clearing expenses
+  document.getElementById('clearExpensesButton').addEventListener('click', function() {
+    totalExpenses = 0;
+    totalExpensesDisplay.innerText = totalExpenses.toFixed(2);
+    expenseList.innerHTML = '';
+    expenseWarning.style.display = 'none';
+  });
 });
 
 
