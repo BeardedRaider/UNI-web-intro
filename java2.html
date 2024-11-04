@@ -32,12 +32,48 @@
       </nav>
 
       
-      <!-- City Form for population Uni way-->
       <section class="sectionCon">
-        <h1></h1>
-        <h2>Class Exercise</h2>
-
+        <h1>Basic Quiz Application</h1>
+        <form id="quizForm">
+          <div class="question">
+            <label for="question1">1. What is the capital of France?</label>
+            <br>
+            <input type="radio" id="q1a" name="question1" value="paris" required>
+            <label for="q1a">Paris</label><br>
+            <input type="radio" id="q1b" name="question1" value="london">
+            <label for="q1b">London</label><br>
+            <input type="radio" id="q1c" name="question1" value="berlin">
+            <label for="q1c">Berlin</label><br>
+            <input type="radio" id="q1d" name="question1" value="madrid">
+            <label for="q1d">Madrid</label>
+          </div>
+          <div class="question">
+            <label for="question2">2. What is 2 + 2?</label>
+            <br>
+            <input type="radio" id="q2a" name="question2" value="3" required>
+            <label for="q2a">3</label><br>
+            <input type="radio" id="q2b" name="question2" value="4">
+            <label for="q2b">4</label><br>
+            <input type="radio" id="q2c" name="question2" value="5">
+            <label for="q2c">5</label><br>
+            <input type="radio" id="q2d" name="question2" value="6">
+            <label for="q2d">6</label>
+          </div>
+          <div class="question">
+            <label for="question3">3. What is the color of the sky?</label>
+            <br>
+            <input type="radio" id="q3a" name="question3" value="blue" required>
+            <label for="q3a">Blue</label><br>
+            <input type="radio" id="q3b" name="question3" value="green">
+            <label for="q3b">Green</label><br>
+            <input type="radio" id="q3c" name="question3" value="red">
+            <label for="q3c">Red</label><br>
+            <input type="radio" id="q3d" name="question3" value="yellow">
+            <label for="q3d">Yellow</label>
+          </div>
+          <button type="button" id="submitQuizButton">Submit Quiz</button>
         </form>
+        <h2 id="quizResult"></h2>
       </section>
 
 
