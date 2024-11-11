@@ -469,3 +469,64 @@ document.getElementById('addCityButton').addEventListener('click', function() {
   });
 
 });
+
+/* jQuery  Task list */
+
+$(document).ready(function() {
+  // Add Task
+  $("#addTask").click(function() {
+    const taskName = $("#taskName").val();
+    const taskPriority = $("#taskPriority").val();
+    const taskDueDate = $("#taskDueDate").val();
+
+    if (taskName && taskDueDate) {
+      const priorityClass = taskPriority.toLowerCase(); // e.g., "high", "medium", "low"
+      $("#taskList").append(`
+        <li>
+          <input type="checkbox" class="markCompleted">
+          <span class="task-name">${taskName}</span> - 
+          <span class="task-priority ${priorityClass}">${taskPriority}</span> - 
+          <span class="task-date">${taskDueDate}</span>
+        </li>
+      `);
+      
+      // Clear inputs
+      $("#taskName").val("");
+      $("#taskDueDate").val("");
+    } else {
+      alert("Please fill in both the task name and due date.");
+    }
+  });
+
+  // Mark Task as Completed
+  $(document).on("change", ".markCompleted", function() {
+    $(this).siblings(".task-name").toggleClass("completed", $(this).is(":checked"));
+  });
+
+  // Sort by Priority
+  $("#sortPriority").click(function() {
+    const sortedTasks = $("#taskList li").sort(function(a, b) {
+      const priorityOrder = { High: 1, Medium: 2, Low: 3 };
+      const priorityA = priorityOrder[$(a).find(".task-priority").text()];
+      const priorityB = priorityOrder[$(b).find(".task-priority").text()];
+      return priorityA - priorityB;
+    });
+    $("#taskList").html(sortedTasks);
+  });
+
+  // Sort by Due Date
+  $("#sortDueDate").click(function() {
+    const sortedTasks = $("#taskList li").sort(function(a, b) {
+      const dateA = new Date($(a).find(".task-date").text());
+      const dateB = new Date($(b).find(".task-date").text());
+      return dateA - dateB;
+    });
+    $("#taskList").html(sortedTasks);
+  });
+
+  // Remove Completed Tasks
+  $("#removeCompleted").click(function() {
+    $("#taskList li").has(".markCompleted:checked").remove();
+  });
+});
+

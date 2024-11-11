@@ -9,7 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
 
-    <title>Tables</title>
+    <title>jQuery</title>
+    <script 
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+		crossorigin="anonymous">
+    </script>
+    <script> 
+    $(document).ready(function(){ console.log("jQuery is working!"); });
+    </script>
   </head>
   <body>
     <nav>
@@ -31,6 +39,33 @@
         </ul>
       </nav>
 
+      <!-- jQuery Main Content -->
+      <section class="task-planner">
+        <h2>Task Planner</h2>
+      
+        <!-- Task Inputs -->
+        <div class="task-inputs">
+          <input type="text" id="taskName" placeholder="Task Name" required>
+          <select id="taskPriority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+          <input type="date" id="taskDueDate" required>
+          <button id="addTask">Add Task</button>
+        </div>
+      
+        <!-- Task List and Sorting Controls -->
+        <div class="task-controls">
+          <button id="sortPriority">Sort by Priority</button>
+          <button id="sortDueDate">Sort by Due Date</button>
+          <button id="removeCompleted">Remove Completed</button>
+        </div>
+      
+        <!-- Task Display List -->
+        <ul id="taskList"></ul>
+      </section>
+      
 
     <script src="script.js"></script>
   </body>
